@@ -1,0 +1,67 @@
+{% extends "login.html" %}
+
+{% block content %}
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='level.css') }}">
+</head>
+<body style="background-color: bisque;">
+<h1 style="font-family: system-ui;">Level 1</h1>
+
+<div style="display: inline;">
+<div style="float: right; width: 10%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{1,2,3,4}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 10%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{5,6,7,8}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 14%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{9,10,11,12}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 10%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0%;">{4,5,6,7}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 13%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{0,-1,-2,-3}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 14%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{-4,-5,-6,-7}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 18%; width: 16%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{-8,-9,-10,-11}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 18%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{-12,-13,-14,-15}</p>
+</div>
+
+<div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 16%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+    <p style="font-size: 35px; margin-top: 0">{12,13,14,15}</p>
+</div>
+</div>
+
+<h2 style="clear: right">
+    Let the N be the set of all numbers; let the following sets be given based on the numbers above: </br>
+    - Set of all negative numbers (A)</br>
+    - Set of all positive numbers (B)</br>
+    - Set of all numbers with two digits (C)</br>
+    Using only the symbols (VALUES IN PARENTHESES CORRESPOND TO SPECIAL SYMBOLS) A, B, C,, N, ∈(E), ⊆(CC), =, ≠(!=), ∩(^), ∪(U), ×(*),′, ∅(%), >, (, and ) write the following statement: </br>
+
+</h2>
+
+<form action="" method="post" novalidate style="float: left; clear: right;">
+    {{ answerForm.hidden_tag() }}
+    <p>
+        {{ answerForm.userAnswer.label}} </br>
+        {{ answerForm.userAnswer(size=52)}}
+    </p>
+    <a href="{{ url_for('level1', user_answer=answer) }}"><p> {{ answerForm.submitAnswer() }} </p></a>
+
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% block content %}
+
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='level.css') }}">
+</head>
+<body style="background-color: cadetblue;">
+    <h1 style="font-family: system-ui;">Level 2</h1>
+    
+    <div style="display: inline;">
+    <div style="float: right;margin-right: 17%; width: 30%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+        <p style="font-size: 25px; margin-top: 0">F = the set of all freshman}</p>
+    </div>
+    
+    <div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 30%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+        <p style="font-size: 25px; margin-top: 0">{S = set of all seniors}</p>
+    </div>
+    
+    <div style="float: right; margin-bottom: 3%; margin-right: 15%; width: 34%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+        <p style="font-size: 25px; margin-top: 0">{M = set of all math majors}</p>
+    </div>
+    
+    <div style="float: right; margin-bottom: 3%; margin-right: 5%; width: 30%; border-radius: 12px; border-style: solid; border-width: 2px; border-color:cadetblue; align-content: center;">
+        <p style="font-size: 25px; margin-top: 0%;">{C = set of all CS Majors}</p>
+    </div>
+    
+    </div>
+    
+    <h2 style="clear: right">
+        Using only the symbols (VALUES IN PARENTHESES CORRESPOND TO SPECIAL SYMBOLS) A, B, C,, N, ∈(E), ⊆(CC), =, ≠(!=), ∩(^), ∪(U), ×(*),′, ∅(%), (, and ) write the following statement into the language of set theory: </br>
+        There are more freshmen who aren’t math majors than there are senior CS
+        majors.
+    </h2>
+    
+    <form action="" method="post" novalidate style="float: left; clear: right;">
+        {{ answerForm.hidden_tag() }}
+        <p>
+            {{ answerForm.userAnswer.label}} </br>
+            {{ answerForm.userAnswer(size=52)}}
+        </p>
+        <a href="{{ url_for('level2', user_answer=answer) }}"><p> {{ answerForm.submitAnswer() }} </p></a>
+    
+    </form>
+    </body>
+    {% endblock %}

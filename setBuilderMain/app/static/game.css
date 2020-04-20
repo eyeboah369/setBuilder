@@ -1,0 +1,22 @@
+div {
+    width: 50%;
+    height: 50%;
+}
+h2 {
+    text-align: center;
+}
+#lvl1 {
+    background-color: bisque;
+}
+
+#lvl2 {
+    background-color: cadetblue;
+}
+
+#lvl3{
+    background-color: darkseagreen;
+}
+
+#lvl4 {
+    background-color: sandybrown;
+}

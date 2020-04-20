@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> {{ title }} - SetBuilder </title>
+        <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css') }}">-->
+    </head>
+
+
+    <body>
+        <div id="main">
+            <h1 style="color: rgb(110, 110, 128); text-align: center; font-family: system-ui";>Welcome to the Set Builder!</h1>
+        </div>
+        
+        <div style="display: inline; align-content: center; margin-left: 45%;">
+
+            <!--START OPTION FOR SET BUILDER-->
+            <div style="display: inline; margin-right: 2%; "> 
+                <button style="font-size: 20px; border-radius: 12px; font-family: system-ui">
+                    <a href="{{ url_for('start') }}">Start</a>
+                </button>
+            </div>
+
+            <!--LEARN OPTION FOR SET BUILDER-->
+            <div style="display: inline;"> 
+                <button style="font-size: 20px; border-radius: 12px; font-family: system-ui">
+                    <a href="">Learn</a>
+                </button>
+            </div>
+
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
