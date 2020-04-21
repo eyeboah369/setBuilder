@@ -5,7 +5,7 @@ This project utilizes [Python](https://www.python.org/downloads/release/python-3
 
 **INSTALLATION**
 
-You will need to install *Flask* no your individual machine to run the application on localhost.
+You will need to install *Flask* to your individual machine to run the application on localhost.
 cd into the cloned project environment and create, then enter the *venv*:
 
 To create the virtual environment:
