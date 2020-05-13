@@ -2,7 +2,11 @@
     <head>
         <title> {{ title }} - SetBuilder </title>
         <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css') }}">-->
+        <style>
+            .mySlides {display:none;}
+        </style>
     </head>
+
 
 
     <body>
@@ -27,7 +31,36 @@
             </div>
 
         </div>
+
+        <div class="w3-container">
+
+          
+          <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides w3-animate-top" src="img_rr_01.jpg" style="width:100%">
+            <img class="mySlides w3-animate-bottom" src="img_rr_02.jpg" style="width:100%">
+            <img class="mySlides w3-animate-top" src="img_rr_03.jpg" style="width:100%">
+            <img class="mySlides w3-animate-bottom" src="img_rr_04.jpg" style="width:100%">
+          </div>
+
+          <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2500);    
+            }
+            </script>
         {% block content %}
         {% endblock %}
     </body>
+
+    
 </html>
