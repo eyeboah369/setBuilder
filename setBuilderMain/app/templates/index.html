@@ -9,7 +9,7 @@
 
 
 
-    <body>
+    <body style="background-color: #C3EFF1">
         <div id="main">
             <h1 style="color: rgb(110, 110, 128); text-align: center; font-family: system-ui";>Welcome to the Set Builder!</h1>
         </div>
@@ -26,20 +26,34 @@
             <!--LEARN OPTION FOR SET BUILDER-->
             <div style="display: inline;"> 
                 <button style="font-size: 20px; border-radius: 12px; font-family: system-ui">
-                    <a href="">Learn</a>
+                    <a target="_blank" href="https://matthewpalmer.net/blog/2015/01/20/discrete-maths-math1081-unsw-notes-sets-functions-sequences/index.html">Learn</a>
                 </button>
             </div>
 
         </div>
 
-        <div class="w3-container">
-
           
-          <div class="w3-content w3-section" style="max-width:500px">
-            <img class="mySlides w3-animate-top" src="img_rr_01.jpg" style="width:100%">
-            <img class="mySlides w3-animate-bottom" src="img_rr_02.jpg" style="width:100%">
-            <img class="mySlides w3-animate-top" src="img_rr_03.jpg" style="width:100%">
-            <img class="mySlides w3-animate-bottom" src="img_rr_04.jpg" style="width:100%">
+          <div class="w3-content w3-section" style="max-width:500px; margin-left: 29%">
+            <div class="mySlides w3-animate-top" style="font-family: system-ui; width:100%; border-radius: 12px; background-color: white; height: 600px; width: 600px; text-align: center;">
+                <h1 style="padding-top: 20px;">HEY THERE SET BUILDER</h1>
+                <img src="../static/set1.jpeg" style="width: 90%; margin-top: 10%">
+                <h3>What do A, B and C have in common?</h3>
+            </div>
+            <div class="mySlides w3-animate-top" style="font-family: system-ui;width:100%; border-radius: 12px; background-color: white; height: 600px; width: 600px; text-align: center;">
+                <h1 style="padding-top: 20px;">WHATS GOOD</h1>
+                <img src="../static/set2.jpeg" style="width: 90%; margin-top: 13%">
+                <h3 style="padding-top: 20px;">Whats a subset? Whats a superset?</h3>
+            </div>
+            <div class="mySlides w3-animate-top" style="font-family: system-ui; font-family: system-ui; width:100%; border-radius: 12px; background-color: white; height: 600px; width: 600px; text-align: center;">
+                <h1 style="padding-top: 20px;">READY TO BUILD SETS</h1>
+                <img src="../static/set3.jpeg" style="width: 90%; margin-top: 13%">
+                <h3 style="padding-top: 20px;">Whats the difference between a union and an intersection?</h3>
+            </div>
+            <div class="mySlides w3-animate-top" style="font-family: system-ui; width:100%; border-radius: 12px; background-color: white; height: 600px; width: 600px; text-align: center;">
+                <h1 style="padding-top: 20px;">THEN LETS GO BRO</h1>
+                <img src="../static/set4.jpeg" style="width: 90%; margin-top: 13%">
+                <h3 style="padding-top: 70px;">How well can you put together a set from scratch?</h3>
+            </div>
           </div>
 
           <script>
@@ -55,7 +69,7 @@
               myIndex++;
               if (myIndex > x.length) {myIndex = 1}    
               x[myIndex-1].style.display = "block";  
-              setTimeout(carousel, 2500);    
+              setTimeout(carousel, 5000);    
             }
             </script>
         {% block content %}

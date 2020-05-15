@@ -5,7 +5,7 @@ from app import app
 #from datetime import datetime
 
 app = Flask(__name__)
-
+os.system("gnome-terminal -e 'python3 setAdder.py'")
 """@app.route("/hello/<name>")
 def hello_there(name):
     now = datetime.now()

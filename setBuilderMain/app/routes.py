@@ -28,7 +28,7 @@ def level1():
     if answerForm.validate_on_submit():
         answer = answerForm.userAnswer.data
         print("This is the users submitted answer: ", answer)
-        if answer == "answer":
+        if answer == "|3|CC(B^A')":
             return redirect(url_for('game', valid_name=" "))
     return render_template('level1.html', answerForm=answerForm)
 
@@ -41,3 +41,13 @@ def level2():
         if answer == "|F^M'|>|S^C|":
             return redirect(url_for('game', valid_name=" "))
     return render_template('level2.html', answerForm=answerForm)
+
+@app.route("/level3", methods=['GET', 'POST'])
+def level3():
+    answerForm = AnswerForm()
+    if answerForm.validate_on_submit():
+        answer = answerForm.userAnswer.data
+        print("This is the users submitted answer: ", answer)
+        if answer == "|F^M'|>|S^C|":
+            return redirect(url_for('game', valid_name=" "))
+    return render_template('level3.html', answerForm=answerForm)
